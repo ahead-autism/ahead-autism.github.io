@@ -2958,14 +2958,29 @@ html[xmlns] .slides {
   margin-bottom: 30px;
   text-align: center;
 }
+.img-round {
+  width: 160px;
+  height: 200px;
+  border-radius: 25%;
+  margin-left: 75px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 1px solid #070808;
+  background-color: #003651;
+}
 
-.tab4-services-box .icon {
+.row-sanka {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+. .tab4-services-box .icon {
   text-align: center;
   font-size: 47px;
   display: inline-block;
   color: #2e93e6;
-  width: 100px;
-  height: 100px;
+  width: 10px;
+  height: 10px;
   border: 1px solid #2e93e6;
   line-height: 100px;
   border-radius: 50%;
@@ -2986,7 +3001,7 @@ html[xmlns] .slides {
 }
 
 .tab4-services-box:hover .icon {
-  background: #2e93e6;
+  background: #090b0c;
   color: #fff;
   border-color: #2e93e6;
 }
