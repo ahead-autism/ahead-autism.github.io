@@ -2958,6 +2958,14 @@ html[xmlns] .slides {
   margin-bottom: 30px;
   text-align: center;
 }
+.col-sanka {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.info-investigators {
+  margin-left: 20px !important;
+}
 .img-round {
   width: 160px;
   height: 200px;
@@ -2968,13 +2976,24 @@ html[xmlns] .slides {
   border: 1px solid #070808;
   background-color: #ffffff;
 }
-
+.img-round-investigators {
+  width: 80px;
+  height: 100px;
+  border-radius: 5%;
+  margin-left: 0px;
+  margin-right: 0px !important;
+  margin-bottom: 5px;
+  object-fit: cover;
+  border: 1px solid #070808;
+  background-color: #ffffff;
+}
 .row-sanka {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-. .tab4-services-box .icon {
+
+.tab4-services-box .icon {
   text-align: center;
   font-size: 47px;
   display: inline-block;
