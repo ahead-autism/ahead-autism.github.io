@@ -723,10 +723,10 @@ section {
 /* Publication table
 /*-----------------------------------------------------------------*/
 
-.speech-recognition-publication {
+.dialogue-management-publication {
 	background-color: rgb(121, 108, 238);
 }
-.dialogue-management-publication {
+.speech-recognition-publication {
 	background-color: rgb(152, 175, 252);
 }
 .speech-synthesis-publication {
