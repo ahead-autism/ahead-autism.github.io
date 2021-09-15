@@ -41,9 +41,12 @@
     <link rel="stylesheet" href="css/etlinefont.css">
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <!-- Vijani added -->
+    <!--
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
     <link href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    -->
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css"/>
 
 
 
@@ -113,7 +116,7 @@
                                 <th scope="col">Title</th>
                                 <th scope="col" style="width: 20%;">Author(s)</th>
                                 <th scope="col">Conference/ Journal</th>
-                                <th scope="col">H-index</th>
+                                <th scope="col" style="width: 9%;">H-index</th>
                                 <th scope="col">Year</th>
                                 <th scope="col">Status</th>
                             </tr>
@@ -128,7 +131,7 @@
                                 <td>Symposium in Natural Language Processing (SNLP2020)</td>
                                 <td></td>
                                 <td>2020</td>
-                                <td>Abstract Presentation is done.</td>
+                                <td>Accepted and presented</td>
                             </tr>
                             <tr class="dialogue-management-publication">
                                 <td>2</td>
@@ -138,7 +141,7 @@
                                 <td>Symposium in Natural Language Processing (SNLP2020)</td>
                                 <td></td>
                                 <td>2020</td>
-                                <td>Abstract Presentation is done.</td>
+                                <td>Accepted and presented</td>
                             </tr>
 
                             <tr class="facial-emotion-publication">
@@ -272,8 +275,8 @@
                                 <td>Lumini Wickremesinghe<br>Dakheela Madanayake<br>Anuradha Karunasena<br>Pradeepa Samarasinghe</td>
                                 <td>International Conference on Industrial and Information Systems </td>
                                 <td>11</td>
-                                <td>Resubmittted for review</td>
                                 <td>2021</td>
+                                <td>Resubmittted for review</td>
                             </tr>
                             <tr class="facial-emotion-publication">
                                 <td>16</td>
@@ -282,8 +285,8 @@
                                 <td>Lumini Wickremesinghe<br>Dakheela Madanayake<br>Anuradha Karunasena<br>Pradeepa Samarasinghe</td>
                                 <td>Asian Conference on Machine Learning</td>
                                 <td>17</td>
-                                <td>Rejected</td>
                                 <td>2021</td>
+                                <td>Rejected</td>
                             </tr>
                             <tr class="gait-gesture-publication">
                                 <td>17</td>
@@ -387,11 +390,17 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#example').DataTable();
-        });
-    </script>
+    <script src="assets/js/jquery.dataTables.min.js" ></script>
+	
+	<script src="assets/js/dataTables.bootstrap.min.js" ></script>
+	
+	<script>
+	//alert("Hello");
+	$(document).ready(function() {
+		//alert($('#example'));
+		$('#example').DataTable();
+} );
+	</script>
 </body>
 
 </html>
