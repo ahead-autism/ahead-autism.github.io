@@ -719,6 +719,46 @@ section {
 	line-height: 60px;
 }
 
+/*-----------------------------------------------------------------*/
+/* Publication table
+/*-----------------------------------------------------------------*/
+
+.speech-recognition-publication {
+	background-color: rgb(231, 160, 135);
+}
+.dialogue-management-publication {
+	background-color: rgb(220, 159, 248);
+}
+.speech-synthesis-publication {
+	background-color: rgb(155, 204, 216);
+}
+.gait-gesture-publication {
+	background-color: rgb(241, 169, 87);
+}
+.nao-robot-publication {
+	background-color:rgb(149, 222, 245);
+}
+.repetitive-behaviour-publication {
+	background-color: rgb(184, 161, 245);
+}
+.facial-emotion-publication {
+	background-color: rgb(248, 250, 109);
+}
+.gaze-attention-publication {
+	background-color: rgb(143, 144, 204);
+}
+.scientific-data-publication {
+	background-color: rgb(115, 145, 101);
+}
+.federated-learning-publication {
+	background-color: rgb(155, 241, 121);
+}
+.joint-attention-publication {
+	background-color: rgb(177, 119, 141);
+}
+.any-other-publication {
+	background-color: rgb(150, 148, 149);
+}
 
 /*-----------------------------------------------------------------*/
 /* Slider
