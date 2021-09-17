@@ -390,6 +390,7 @@
         var table = $('#example').DataTable();
         var rowCount = table.rows().count();
         document.getElementById("numPublications").innerHTML = rowCount;
+        table.order( [ 0, 'desc' ] ).draw();
         //alert('Rows ' +rowCount + ' are selected');
     </script>
 </body>
