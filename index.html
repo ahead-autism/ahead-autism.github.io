@@ -135,25 +135,28 @@
         </div>
 
         <div class="row">
+          <!--editing-->
+          
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in">
             <div class="icon-box icon-box-pink">
-              <div class="icon"><i class="bx bx-file"></i></div>
+              <div class="icon" data-toggle="tooltip" data-placement="top" title="Coming Soon!"><i class="bx bx-file"></i></div>
               <h4 class="title">PAAS</h4>
               <p class="description">PAAS is a Pictorial Autism Assessments Screening tool that is used to detect symptoms of autistic spectrum disorder of children aged between year 1 to year 5 and 7 months.</p>
             </div>
           </div>
+        
 
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bx bx-palette"></i></div>
+              <div class="icon" data-toggle="tooltip" data-placement="top" title="Coming Soon!"><i class="bx bx-palette"></i></div>
               <h4 class="title">DMAT</h4>
-              <p class="description">Development milestone test is performed for a child to ensure whether child is growing according to the development milestones and identify children with disorders and children with poor IQ levels. </p>                 
+              <p class="description" >Development milestone test is performed for a child to ensure whether child is growing according to the development milestones and identify children with disorders and children with poor IQ levels. </p>                 
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bx bx-video"></i></div>
+              <div class="icon" data-toggle="tooltip" data-placement="top" title="Coming Soon!"><i class="bx bx-video"></i></div>
               <h4 class="title">Video Annotation</h4>
               <p class="description">We create our tool to Automatically detect Autism in an uploaded children’s video by using the latest Artificial Intelligence and Machine Learning Technologies, which will be gathering data collection by video recordings and annotating videos based on the categories by professional health users.</p                
             </div>
@@ -617,7 +620,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
- 
+  <script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
 
 
 </body>

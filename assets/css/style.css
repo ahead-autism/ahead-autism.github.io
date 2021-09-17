@@ -2987,6 +2987,17 @@ html[xmlns] .slides {
   border: 1px solid #070808;
   background-color: #ffffff;
 }
+.img-round-interns {
+  width: 80px;
+  height: 100px;
+  border-radius: 5%;
+  margin-left: 0px;
+  margin-right: 0px !important;
+  margin-bottom: 5px;
+  object-fit: cover;
+  border: 1px solid #070808;
+  background-color: #ffffff;
+}
 .row-sanka {
   display: flex;
   flex-direction: column;
