@@ -40,11 +40,42 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
     <link rel="stylesheet" href="css/etlinefont.css">
     <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <!-- Vijani added -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    -->
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css" />
 
+    <style>
+        #example_length {
+            padding-right: 300px;
+            padding-left: 80px;
+        }
+
+        select[name="example_length"] {
+            margin-bottom: 0px;
+            margin-right: 10px;
+            margin-left: 10px;
+            padding: 0px;
+            padding-left: 5px;
+        }
+
+        input[type="search"] {
+            padding: 0px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            height: 30px;
+            width: 400px !important;
+            border-color: lightblue;
+        }
+    </style>
 
 </head>
 
 <body>
+
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
@@ -87,79 +118,220 @@
             </div>
         </section><!-- End Breadcrumbs -->
 
+        <br><br><br>
+        <p style="color:#24478f; font-size: 23px; margin-left: 100px; font-weight:bolder;">
+            <!--<p style="margin-left: 100px;" >-->
+            Number of publications:
+            <span id="numPublications"></span>
+        </p>
+
+
+
         <!--Start Section-->
-        <section class="section">
+        <section class="section" style="padding-top: 40px;">
+
             <div class="container">
                 <!--<div class="row">-->
-                    <div class="col-md-12">
-                        <!--<div class="content-tab-1">-->
 
-                            <table class="table table-bordered">
+                <div class="col-md-12">
 
-                                <thead>
-                                    <tr>
-                                        <th scope="col" style="width: 2%;">#</th>
-                                        <th scope="col">Type</th>
-                                        <th scope="col">Title</th>
-                                        <th scope="col" style="width: 20%;">Author(s)</th>
-                                        <th scope="col">Year</th>
-                                        <th scope="col">Conference/ Journal Name</th>
-                                        <th scope="col">Status</th>
-                                    </tr>
-                                    <tr class="speech-recognition-publication">
-                                        <td>1</td>
-                                        <td>Abstract</td>
-                                        <td>Novel Automated Sinhala Speech Recognition System to Screen Young Children with Autism Spectrum Disorder (ASD) in Sri Lanka</td>
-                                        <td>Veerandi Kulasekara <br> Vijani Piyawardana<br>Shyam Reyal<br>Koliya Pulasinghe</td>
-                                        <td>2020</td>
-                                        <td>Symposium in Natural Language Processing (SNLP2020)</td>
-                                        <td>Abstract Presentation is done.</td>
-                                    </tr>
-                                    <tr class="dialogue-management-publication">
-                                        <td>2</td>
-                                        <td>Abstract</td>
-                                        <td>Novel Automated Sinhala Speech Recognition System to Screen Young Children with Autism Spectrum Disorder (ASD) in Sri Lanka</td>
-                                        <td>Vijani Piyawardana <br>Veerandi Kulasekara <br>Shyam Reyal<br>Koliya Pulasinghe</td>
-                                        <td>2020</td>
-                                        <td>Symposium in Natural Language Processing (SNLP2020)</td>
-                                        <td>Abstract Presentation is done.</td>
-                                    </tr>
-                                   
-                                    <tr class="facial-emotion-publication">
-                                        <td>3</td>
-                                        <td>Conference Paper</td>
-                                        <td>Facial Emotion Prediction through action units and deep learning</td>
-                                        <td>Madhuka Nadeeshani<br>Akash Jayaweera<br>Pradeepa Samarasinghe</td>
-                                        <td>2020</td>
-                                        <td>International Conference in Advancement in Computing (ICAC2020)</td>
-                                        <td>Paper Published</td>
-                                    </tr>
-                                    <tr class="facial-emotion-publication">
-                                        <td>4</td>
-                                        <td>Journal Article</td>
-                                        <td>Review of Technology on Facial Emotion Expression Analysis of Young Children with Autism</td>
-                                        <td>Pradeepa Samarasinghe<br>Dulangi Dahanayake<br>Swarna Wijethunga<br>Madhuka Nadeeshani</td>
-                                        <td>2021</td>
-                                        <td>Sri Lanka Journal of NSF</td>
-                                        <td>Preparing for submission</td>
-                                    </tr>
-                                    <tr class="any-other-publication">
-                                        <td>5</td>
-                                        <td>Journal Article</td>
-                                        <td>Diagnosing Autism in low-income countries:clinical record-based analysis in Sri Lanka</td>
-                                        <td>K.G.H.S Peiris<br> Chitraka Wickramarachchi <br> Veerandi Kulasekara<br>Madhuka Nadeeshani <br>Pradeepa Samarasinghe<br>and Dulangi Dahanayake</td>
-                                        <td>2021</td>
-                                        <td>Autism Research</td>
-                                        <td>Preparing for submission</td>
-                                    </tr>
-                                </thead>
+                    <!--<div class="content-tab-1">-->
+
+                    <!--table goes here-->
+
+                    <table id="example" class="table table-bordered">
 
 
-                            </table>
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 2%;">#</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Title</th>
+                                <th scope="col" style="width: 20%;">Author(s)</th>
+                                <th scope="col">Conference/ Journal</th>
+                                <th scope="col" style="width: 9%;">H-index</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <!-- PLEASE ADD THE NEW PUBLICATIONS TO THE TOP-->
+
+                            <!--
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        -->
+                            <!--
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            -->
+                            <tr class="gait-gesture-publication">
+                                <td>12</td>
+                                <td>Conference Paper</td>
+                                <td>Deep learning based gait and gesture abnormality detection</td>
+                                <td>Gagan Hashentha<br>Chandimal Jayawardana<br>Pradeepa Samarasinghe<br>Pratheepan
+                                    Yogarajah<br>Lasantha Senevirathna</td>
+                                <td>Conference yet to be decided</td>
+                                <td></td>
+                                <td>2021</td>
+                                <td>Work in progress</td>
+                            </tr>
+
+                            <tr class="speech-recognition-publication">
+                                <td>11</td>
+                                <td>Conference Paper</td>
+                                <td>Child’s Age Range Prediction Using Sinhala Speech Recognition System.</td>
+                                <td>Ashimi Kathiarachchi<br>Veerandi Kulasekara<br>Koliya Pulasinghe<br>Vijani
+                                    Piyawardana</td>
+                                <td>Internation Conference on Advancements in Computing 2021</td>
+                                <td>3</td>
+                                <td>2021</td>
+                                <td>To be submitted</td>
+                            </tr>
+                            <tr class="speech-recognition-publication">
+                                <td>10</td>
+                                <td>Conference Paper</td>
+                                <td>Automatic Intonation Recognition of Sinhala Language to Detect Speech Impairments in
+                                    Young Children</td>
+                                <td>C. Wichramaarachchi<br>Veerandi Kulasekara<br>Koliya Pulasinghe<br>Vijani
+                                    Piyawardana</td>
+                                <td>Internation Conference on Advancements in Computing 2021</td>
+                                <td>3</td>
+                                <td>2021</td>
+                                <td>To be submitted</td>
+                            </tr>
+                            <tr class="speech-recognition-publication">
+                                <td>9</td>
+                                <td>Conference Paper</td>
+                                <td>Automatic Speech Recognition System to Analyze Sinhala Speech in Young Children to
+                                    Detect Pronunciation Issues using Phonemes.</td>
+                                <td>Veerandi Kulasekara<br>Shyam Reyal<br>Koliya Pulasinghe</td>
+                                <td>seventh ACM SIGIR Conference on Human Information Interaction and Retrieval</td>
+                                <td>19</td>
+                                <td>2021</td>
+                                <td>To be submitted</td>
+                            </tr>
+                            <tr class="facial-emotion-publication">
+                                <td>8</td>
+                                <td>Conference Paper</td>
+                                <td>Machine Learning Based Emotion Level Assessment</td>
+                                <td>Lumini Wickremesinghe<br>Dakheela Madanayake<br>Anuradha Karunasena<br>Pradeepa
+                                    Samarasinghe</td>
+                                <td>International Conference on Industrial and Information Systems </td>
+                                <td>11</td>
+                                <td>2021</td>
+                                <td>Resubmittted for review</td>
+                            </tr>
+
+                            <tr class="facial-emotion-publication">
+                                <td>7</td>
+                                <td>Journal Article</td>
+                                <td>Review of Technology on Facial Emotion Expression Analysis of Young Children with
+                                    Autism</td>
+                                <td>Pradeepa Samarasinghe<br>Dulangi Dahanayake<br>Swarna Wijethunga<br>Madhuka
+                                    Nadeeshani</td>
+                                <td>Sri Lanka Journal of the National Science Foundation of Sri Lanka</td>
+                                <td>18</td>
+                                <td>2021</td>
+                                <td>Resubmitted for review</td>
+                            </tr>
+                            <tr class="any-other-publication">
+                                <td>6</td>
+                                <td>Journal Article</td>
+                                <td>Diagnosing Autism in low-income countries:clinical record-based analysis in Sri
+                                    Lanka</td>
+                                <td>K.G.H.S Peiris<br> Chitraka Wickramarachchi <br> Veerandi Kulasekara<br>Madhuka
+                                    Nadeeshani <br>Pradeepa Samarasinghe<br>and Dulangi Dahanayake</td>
+                                <td>Autism Research</td>
+                                <td>66</td>
+                                <td>2021</td>
+                                <td>Addressing Review Comments</td>
+                            </tr>
+                            <tr class="repetitive-behaviour-publication">
+                                <td>5</td>
+                                <td>Conference Paper</td>
+                                <td>Skeleton Based Periodic and Aperiodic Repetitive Action Recognition</td>
+                                <td>Nushara Wedasingha<br>Pradeepa Samarasinghe<br>Lasantha Senevirathna<br>Alessanrdro
+                                    Puiatti<br>Michela Papandrea</td>
+                                <td>IEEE conference on automatic face and gesture recognition</td>
+                                <td>42</td>
+                                <td>2021</td>
+                                <td>Requested to submit for the second round by making the changes</td>
+                            </tr>
+                            <tr class="gaze-attention-publication">
+                                <td>4</td>
+                                <td>Conference Paper</td>
+                                <td>Deep Learning Parameter Selection for Multi-Output Regression on Head Pose
+                                    Estimation</td>
+                                <td>Vidushani Dhanawansa<br>Pradeepa Samarasinghe<br>Pratheepan Yogarajah<br>Bryan
+                                    Gardiner<br>Anuradha Karunasena</td>
+                                <td>IEEE Conference on Automatic Face and Gesture Recognition</td>
+                                <td>41</td>
+                                <td>2021</td>
+                                <td>Submitted for review</td>
+                            </tr>
+
+                            <tr class="speech-recognition-publication">
+                                <td>3</td>
+                                <td>Conference Paper</td>
+                                <td>Automated Sinhala Speech Emotions Analysis Tool for Autism Children</td>
+                                <td>Kavini Welarathna<br>Veerandi Kulasekara<br>Koliya Pulasinghe<br>Vijani Piyawardana
+                                </td>
+                                <td>IEEE International Conferece on Information and Automation for Sustainablity, 2021
+                                </td>
+                                <td>6</td>
+                                <td>2021</td>
+                                <td>Accepted and presented</td>
+                            </tr>
+                            <tr class="facial-emotion-publication">
+                                <td>2</td>
+                                <td>Conference Paper</td>
+                                <td>Facial Emotion Prediction through action units and deep learning</td>
+                                <td>Madhuka Nadeeshani<br>Akash Jayaweera<br>Pradeepa Samarasinghe</td>
+                                <td>International Conference on Advancements in Computing (ICAC)</td>
+                                <td></td>
+                                <td>2020</td>
+                                <td>Published</td>
+                            </tr>
+
+                            <tr class="speech-recognition-publication">
+                                <td>1</td>
+                                <td>Abstract</td>
+                                <td>Novel Automated Sinhala Speech Recognition System to Screen Young Children with
+                                    Autism Spectrum Disorder (ASD) in Sri Lanka</td>
+                                <td>Veerandi Kulasekara <br> Vijani Piyawardana<br>Shyam Reyal<br>Koliya Pulasinghe</td>
+                                <td>Symposium in Natural Language Processing (SNLP2020)</td>
+                                <td></td>
+                                <td>2020</td>
+                                <td>Accepted and presented</td>
+                            </tr>
 
 
-                        <!--</div>-->
-                    </div>
+
+                        </tbody>
+                    </table>
+
+
+                    <!--</div>-->
+                </div>
 
                 <!--</div>-->
                 <!--/.row-->
@@ -201,7 +373,26 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
 
+    <script src="assets/js/dataTables.bootstrap.min.js"></script>
+
+    <script>
+        //alert("Hello");
+        $(document).ready(function () {
+            //alert($('#example'));
+            $('#example').DataTable();
+
+        });
+    </script>
+
+    <script>
+        var table = $('#example').DataTable();
+        var rowCount = table.rows().count();
+        document.getElementById("numPublications").innerHTML = rowCount;
+        table.order( [ 0, 'desc' ] ).draw();
+        //alert('Rows ' +rowCount + ' are selected');
+    </script>
 </body>
 
 </html>
