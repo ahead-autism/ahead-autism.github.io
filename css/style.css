@@ -2373,6 +2373,12 @@ ul.timeline {
 	margin-bottom: 7px;
 }
 
+.work-detail-list-inner {
+	padding: 0px 0px 7px;
+	line-height: 22px;
+	font-size: 16px;
+	margin-bottom: 7px;
+}
 .work-detail-list li span {
 	padding-right: 15px;
 	text-transform: uppercase;
