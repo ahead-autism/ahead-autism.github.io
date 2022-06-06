@@ -144,7 +144,7 @@
 
                         <thead>
                             <tr>
-                                <th scope="col" style="width: 2%;">#</th>
+                                <!-- <th scope="col" style="width: 2%;">#</th> -->
                                 <th scope="col">Type</th>
                                 <th scope="col">Title</th>
                                 <th scope="col" style="width: 20%;">Author(s)</th>
@@ -196,7 +196,34 @@
                             -->
 
                             <tr class="any-other-publication">
-                                <td>11</td>
+                                <!-- <td>11</td> -->
+                                <td>Conference Paper</td>
+                                <td>Graph Neural network based Child Activity Recognition</td>
+                                <td>
+                                    Sanka Mohottala
+                                </td>
+                                <td>IEEE International Conference on Industrial Technology (ICIT 2022)</td>
+                                <td>25</td>
+                                <td>2022</td>
+                                <td>Accepted</td>
+                            </tr>
+
+                            <tr class="facial-emotion-publication">
+                                <!-- <td>11</td> -->
+                                <td>Conference Paper</td>
+                                <td>Automated Analysis of Child Emotion Expression</td>
+                                <td>
+                                    Madhuka Nadeeshani
+                                </td>
+                                <td>IEEE International Conference on Industrial Technology (ICIT 2022)</td>
+                                <td>25</td>
+                                <td>2022</td>
+                                <td>Accepted</td>
+                            </tr>
+
+
+                            <tr class="any-other-publication">
+                                <!-- <td>11</td> -->
                                 <td>Journal Paper</td>
                                 <td>Diagnosing Autism in low-income countries: clinical record-based analysis in Sri
                                     Lanka</td>
@@ -219,7 +246,7 @@
 
 
                             <tr class="gaze-attention-publication">
-                                <td>10</td>
+                                <!-- <td>10</td> -->
                                 <td>Conference Paper</td>
                                 <td>The Automated Temporal Analysis of Gaze Following in a Visual Tracking Task</td>
                                 <td>
@@ -235,7 +262,7 @@
                                 <td>Published</td>
                             </tr>
                             <tr class="speech-synthesis-publication">
-                                <td>9</td>
+                                <!-- <td>9</td> -->
                                 <td>Conference Paper</td>
                                 <td>Adapting MaryTTS for Synthesizing Sinhalese Speech to Communicate with Children</td>
                                 <td>
@@ -254,7 +281,7 @@
                                 <td>Published</td>
                             </tr>
                             <tr class="any-other-publication">
-                                <td>8</td>
+                                <!-- <td>8</td> -->
                                 <td>Conference Paper</td>
                                 <td>ASD Screening for Toddlers via Physical Interpretation through Advanced AI</td>
                                 <td>
@@ -271,7 +298,7 @@
                                 <td>Published</td>
                             </tr>
                             <tr class="speech-recognition-publication">
-                                <td>7</td>
+                                <!-- <td>7</td> -->
                                 <td>Abstract</td>
                                 <td>Novel Automated Sinhala Speech and Dialogue Management System to Screen Young
                                     Children with Autism Spectrum Disorder (ASD) in Sri Lanka</td>
@@ -287,7 +314,7 @@
                                 <td>Accepted</td>
                             </tr>
                             <tr class="facial-emotion-publication">
-                                <td>6</td>
+                                <!-- <td>6</td> -->
                                 <td>Conference Paper</td>
                                 <td>Machine Learning Based Emotion Level Assessment</td>
                                 <td>Lumini Wickremesinghe<br>Dakheela Madanayake<br>Anuradha Karunasena<br>Pradeepa
@@ -299,7 +326,7 @@
                                 <td>Published</td>
                             </tr>
                             <tr class="repetitive-behaviour-publication">
-                                <td>5</td>
+                                <!-- <td>5</td> -->
                                 <td>Conference Paper</td>
                                 <td>Skeleton Based Periodic and Aperiodic Repetitive Action Recognition</td>
                                 <td>Nushara Wedasingha<br>Pradeepa Samarasinghe<br>Lasantha Senevirathna<br>Alessanrdro
@@ -310,7 +337,7 @@
                                 <td>Accepted</td>
                             </tr>
                             <tr class="gaze-attention-publication">
-                                <td>4</td>
+                                <!-- <td>4</td> -->
                                 <td>Conference Paper</td>
                                 <td>Comparative Study of Deep Learning Parameter Selection for Multi-Output Regression
                                     on Head Pose Estimation</td>
@@ -322,7 +349,7 @@
                                 <td>Accepted</td>
                             </tr>
                             <tr class="speech-recognition-publication">
-                                <td>3</td>
+                                <!-- <td>3</td> -->
                                 <td>Conference Paper</td>
                                 <td>Automated Sinhala Speech Emotions Analysis Tool for Autism Children</td>
                                 <td>Kavini Welarathna<br>Veerandi Kulasekara<br>Koliya Pulasinghe<br>Vijani Piyawardana
@@ -334,7 +361,7 @@
                                 <td>Published</td>
                             </tr>
                             <tr class="facial-emotion-publication">
-                                <td>2</td>
+                                <!-- <td>2</td> -->
                                 <td>Conference Paper</td>
                                 <td>Facial Emotion Prediction through action units and deep learning</td>
                                 <td>Madhuka Nadeeshani<br>Akash Jayaweera<br>Pradeepa Samarasinghe</td>
@@ -345,7 +372,7 @@
                                 <td>Published</td>
                             </tr>
                             <tr class="speech-recognition-publication">
-                                <td>1</td>
+                                <!-- <td>1</td> -->
                                 <td>Abstract</td>
                                 <td>Novel Automated Sinhala Speech Recognition System to Screen Young Children with
                                     Autism Spectrum Disorder (ASD) in Sri Lanka</td>
@@ -419,7 +446,7 @@
         var table = $('#example').DataTable();
         var rowCount = table.rows().count();
         document.getElementById("numPublications").innerHTML = rowCount;
-        table.order([0, 'asc']).draw();
+        table.order([4, 'dsc']).draw();
         //alert('Rows ' +rowCount + ' are selected');
     </script>
 </body>
