@@ -773,6 +773,15 @@ section {
 
 */
 
+.accepted-publication {
+	background-color: rgb(153, 248, 140);
+}
+.presented-publication {
+	background-color: rgb(152, 175, 252);
+}
+.published-publication {
+	background-color: rgb(250, 152, 25);
+}
 .speech-recognition-publication {
 	background-color: rgb(152, 175, 252);
 }
